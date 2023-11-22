@@ -1,0 +1,89 @@
+<div class="main_content_iner overly_inner">
+  <div class="container-fluid p-0">
+    <div class="position-relative">
+      <page-title [title]="'Settings'"></page-title>
+      <hr style="margin-top: -5px" />
+      <div class="row">
+        <div class="col-md-3"><h6 class="font-weight-bold">API Config</h6></div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 col-lg-2">
+          <label for="customer">
+            <h6 class="font-weight bold small">Customer ID</h6>
+          </label>
+          <input
+            type="text"
+            name="customer"
+            id="customer"
+            class="form-control"
+          />
+        </div>
+        <div class="col-md-3 col-lg-2">
+          <label for="username">
+            <h6 class="font-weight bold small">Username</h6>
+          </label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            class="form-control"
+          />
+        </div>
+        <div class="col-md-3 col-lg-2">
+          <label for="password">
+            <h6 class="font-weight bold small">Password</h6>
+          </label>
+          <input
+            type="text"
+            name="password"
+            id="password"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <h6>Accounts</h6>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 col-lg-2">
+          <label for="pool">
+            <h6 class="font-weight bold small">Pool Account</h6>
+          </label>
+          <select2
+            [id]="'pool'"
+            name="pool"
+            [(ngModel)]="fields.pool"
+            ngDefaultControl
+          >
+          </select2>
+        </div>
+        <div class="col-md-3 col-lg-2">
+          <label for="card">
+            <h6 class="font-weight bold small">Card Account</h6>
+          </label>
+          <select2
+            [id]="'card'"
+            name="card"
+            [(ngModel)]="fields.card"
+            ngDefaultControl
+          >
+          </select2>
+        </div>
+        <div class="col-md-3 col-lg-2">
+          <label for="suspense">
+            <h6 class="font-weight bold small">Suspense Account</h6>
+          </label>
+          <select2
+            [id]="'suspense'"
+            name="suspense"
+            [(ngModel)]="fields.suspense"
+            ngDefaultControl
+          >
+          </select2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

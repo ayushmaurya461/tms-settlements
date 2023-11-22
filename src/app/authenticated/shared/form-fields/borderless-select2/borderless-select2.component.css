@@ -1,0 +1,15 @@
+.form-input-group {
+  border: none !important;
+}
+
+.normalInput {
+  border: none;
+  background-color: transparent;
+  /* margin-left: -10x !important; */
+}
+
+.normalInput:hover,
+.normalInput:focus {
+  box-shadow: none !important;
+  border: none !important;
+}

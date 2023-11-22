@@ -1,0 +1,22 @@
+<div class="main_content_iner overly_inner">
+  <div class="container-fluid p-0">
+    <section class="container table-wrapper">
+      <data-counter
+        [data]="counterData"
+        (counterClickFunction)="counterClickFunction($event)"
+      ></data-counter>
+      <div class="position-relative">
+        <page-title [title]="'BPCL Card Details'"></page-title>
+        <table-full
+          [columns]="tableColumns"
+          [buttons]="tableButtons"
+          [tableTitle]="'BPCL Card Details'"
+          [optionData]="optionData"
+        >
+        </table-full>
+      </div>
+    </section>
+  </div>
+</div>
+
+<app-bpcl-card-details-form></app-bpcl-card-details-form>

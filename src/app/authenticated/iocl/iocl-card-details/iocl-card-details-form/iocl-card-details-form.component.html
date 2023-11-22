@@ -1,0 +1,96 @@
+<div
+  id="cardAssociation"
+  class="modal fade bd-example-modal-lg"
+  tabindex="-1"
+  role="dialog"
+  data-backdrop="static"
+  aria-labelledby="dummyModal"
+  style="overflow-y: scroll"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content p-1">
+      <div class="modal-header">
+        <h5 class="modal-title font-weight-bold" id="cardAssociationTitle">
+          Card Details
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">Close &times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form #form="ngForm">
+          <div class="row">
+            <div class="col-md-4">
+              <label for="card">
+                <h6 class="font-weight-bold small">Card No</h6>
+              </label>
+              <input
+                name="card"
+                id="card"
+                type="number"
+                rows="1"
+                class="form-control"
+                [(ngModel)]="fields.card"
+                placeholder="Last Four Digits"
+              />
+            </div>
+            <div class="col-md-4">
+              <label for="lastFourDigits">
+                <h6 class="font-weight-bold small">Last Four Digits</h6>
+              </label>
+              <input
+                name="lastFourDigits"
+                id="lastFourDigits"
+                rows="1"
+                type="number"
+                class="form-control"
+                [(ngModel)]="fields.lastFourDigits"
+                placeholder="Last Four Digits"
+              />
+            </div>
+            <div class="col-md-4">
+              <label for="issue">
+                <h6 class="font-weight-bold small">Issue Date</h6>
+              </label>
+              <input
+                type="text"
+                name="date"
+                id="date"
+                [(ngModel)]="fields.issueDate"
+                placeholder="Issue Date"
+                onFocus="(this.type='date')"
+                class="form-control"
+              />
+            </div>
+            <div class="col-md-4">
+              <label for="status_allocation">
+                <h6 class="font-weight-bold small">Status/Allocation</h6>
+              </label>
+              <select2
+                [id]="'status_allocation'"
+                name="status_allocation"
+                [(ngModel)]="fields.status_allocation"
+                [selectedData]="fields.status_allocation"
+                ngDefaultControl
+                placeholder="Select"
+              ></select2>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <div class="row d-flex justify-content-end">
+          <button class="btn btn-success" data-dismiss="modal" type="button">
+            Save
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
